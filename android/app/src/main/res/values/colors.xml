@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Solene base colors — used only by the XML theme (splash screen).
+         All runtime colors are handled by Compose's MaterialTheme. -->
+    <color name="solene_primary">#FF6750A4</color>
+    <color name="solene_surface">#FFFEF7FF</color>
+    <color name="solene_on_surface">#FF1D1B20</color>
+</resources>

@@ -1,0 +1,8 @@
+Prediction illustrations
+=======================
+
+Files in this folder (period, ovulation, fertile, profile, waiting) are
+original graphics drawn for Solene and released under CC0 1.0
+Universal: https://creativecommons.org/publicdomain/zero/1.0/
+
+They are listed on the in-app About > Credits screen.

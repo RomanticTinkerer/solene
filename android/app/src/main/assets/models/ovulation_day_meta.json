@@ -1,0 +1,77 @@
+{
+  "target": "Next_EstimatedDayofOvulation",
+  "feature_names": [
+    "LengthofCycle",
+    "MeanCycleLength",
+    "MeanMensesLength",
+    "MeanBleedingIntensity",
+    "LengthofMenses",
+    "TotalMensesScore",
+    "MensesScoreDayOne",
+    "MensesScoreDayTwo",
+    "MensesScoreDayThree",
+    "MensesScoreDayFour",
+    "MensesScoreDayFive",
+    "MensesScoreDaySix",
+    "MensesScoreDaySeven",
+    "Age",
+    "Height",
+    "Weight",
+    "BMI",
+    "ReproductiveCategory",
+    "Numberpreg",
+    "Livingkids",
+    "Breastfeeding"
+  ],
+  "feature_defaults": {
+    "LengthofCycle": 28.0,
+    "MeanCycleLength": 28.75,
+    "MeanMensesLength": 5.2366946778711485,
+    "MeanBleedingIntensity": 9.857142857142858,
+    "LengthofMenses": 5.0,
+    "TotalMensesScore": 10.0,
+    "MensesScoreDayOne": 2.0,
+    "MensesScoreDayTwo": 3.0,
+    "MensesScoreDayThree": 2.0,
+    "MensesScoreDayFour": 1.0,
+    "MensesScoreDayFive": 1.0,
+    "MensesScoreDaySix": 1.0,
+    "MensesScoreDaySeven": 1.0,
+    "Age": 32.0,
+    "Height": 65.0,
+    "Weight": 141.0,
+    "BMI": 24.3635790800252,
+    "ReproductiveCategory": 0.0,
+    "Numberpreg": 3.0,
+    "Livingkids": 3.0,
+    "Breastfeeding": 0.0
+  },
+  "metrics": {
+    "rmse": 3.0581567833914143,
+    "by_history": {
+      "all": 3.0581567833914143,
+      "under_3_cycles": 3.3352370997732494,
+      "3_plus_cycles": 2.9897852499468422
+    },
+    "baselines": {
+      "luteal_estimate": {
+        "all": 3.011241211997519,
+        "under_3_cycles": 3.406048636642627,
+        "3_plus_cycles": 2.911386553010781
+      },
+      "measured_ovulation_mean": {
+        "all": 2.5713599787906163,
+        "under_3_cycles": 3.0081855540955003,
+        "3_plus_cycles": 2.464091789291934
+      }
+    },
+    "rows": 1358,
+    "clients": 144,
+    "split": "5-fold grouped by person",
+    "dataset": "FedCycleData071012.csv"
+  },
+  "clamps": {
+    "min": 8,
+    "max": 40
+  }
+}

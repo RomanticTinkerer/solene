@@ -1,0 +1,72 @@
+{
+  "target": "Next_LengthofCycle",
+  "feature_names": [
+    "LengthofCycle",
+    "MeanCycleLength",
+    "MeanMensesLength",
+    "MeanBleedingIntensity",
+    "LengthofMenses",
+    "TotalMensesScore",
+    "MensesScoreDayOne",
+    "MensesScoreDayTwo",
+    "MensesScoreDayThree",
+    "MensesScoreDayFour",
+    "MensesScoreDayFive",
+    "MensesScoreDaySix",
+    "MensesScoreDaySeven",
+    "Age",
+    "Height",
+    "Weight",
+    "BMI",
+    "ReproductiveCategory",
+    "Numberpreg",
+    "Livingkids",
+    "Breastfeeding"
+  ],
+  "feature_defaults": {
+    "LengthofCycle": 29.0,
+    "MeanCycleLength": 28.857142857142858,
+    "MeanMensesLength": 5.214285714285714,
+    "MeanBleedingIntensity": 9.857142857142858,
+    "LengthofMenses": 5.0,
+    "TotalMensesScore": 10.0,
+    "MensesScoreDayOne": 2.0,
+    "MensesScoreDayTwo": 3.0,
+    "MensesScoreDayThree": 2.0,
+    "MensesScoreDayFour": 1.0,
+    "MensesScoreDayFive": 1.0,
+    "MensesScoreDaySix": 1.0,
+    "MensesScoreDaySeven": 1.0,
+    "Age": 32.0,
+    "Height": 65.0,
+    "Weight": 141.0,
+    "BMI": 24.3635790800252,
+    "ReproductiveCategory": 0.0,
+    "Numberpreg": 3.0,
+    "Livingkids": 3.0,
+    "Breastfeeding": 0.0
+  },
+  "metrics": {
+    "rmse": 3.189903744228679,
+    "by_history": {
+      "all": 3.189903744228679,
+      "under_3_cycles": 3.357600934738686,
+      "3_plus_cycles": 3.149470612612527
+    },
+    "baselines": {
+      "personal_mean": {
+        "all": 3.163652624575966,
+        "under_3_cycles": 3.6194167078362973,
+        "3_plus_cycles": 3.0474598468837915
+      }
+    },
+    "rows": 1490,
+    "clients": 148,
+    "split": "5-fold grouped by person",
+    "dataset": "FedCycleData071012.csv"
+  },
+  "clamps": {
+    "min": 18,
+    "max": 60
+  }
+}

@@ -1,0 +1,34 @@
+node_modules
+
+# builds
+dist/
+android/app/build/
+android/build/
+android/.gradle/
+android/.kotlin/
+local.properties
+*.apk
+*.aab
+
+# editors
+.idea/
+.vscode/
+*.iml
+
+# python training environment
+# the exported models under Training Data (headstart)/exported_models and
+# assets/models are checked in, only the toolchain is ignored
+Training Data (headstart)/venv/
+Training Data (headstart)/xgboost-src-*/
+__pycache__/
+*.pyc
+
+# training run output
+Training Data (headstart)/output.log
+Training Data (headstart)/output_lagged.txt
+
+# upstream Material Components source kept for reference, not part of the build
+material-components-android-master/
+
+# os
+.DS_Store
