@@ -9,6 +9,8 @@ android/.kotlin/
 local.properties
 *.apk
 *.aab
+*.jks
+*.keystore
 
 # editors
 .idea/

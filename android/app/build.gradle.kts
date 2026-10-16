@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,6 +8,11 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
 }
+
+// The release key stays outside the repo. Without this file, release builds come out unsigned.
+val releaseSigning = File(System.getProperty("user.home"), ".android/solene-release.properties")
+    .takeIf { it.exists() }
+    ?.let { file -> Properties().apply { file.inputStream().use(::load) } }
 
 android {
     namespace = "com.solene.app"
@@ -23,8 +30,18 @@ android {
         }
     }
 
+    signingConfigs {
+        if (releaseSigning != null) create("release") {
+            storeFile = file(releaseSigning.getProperty("storeFile"))
+            storePassword = releaseSigning.getProperty("password")
+            keyAlias = releaseSigning.getProperty("keyAlias")
+            keyPassword = releaseSigning.getProperty("password")
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
