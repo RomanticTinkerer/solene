@@ -2,7 +2,7 @@
 
 Solene is a period and fertility tracker for Android, and everything stays on your phone. It started as a fork of [drip](https://gitlab.com/bloodyhealth/drip). Then it got rebuilt as a native Kotlin app with Material 3 Expressive, plus cycle prediction that runs right on the device.
 
-> **Still a work in progress.** There's no release yet, so you'll need to build it yourself (see below).
+> **Still a work in progress.** You can grab a signed APK from [Releases](https://github.com/RomanticTinkerer/solene/releases) or build it yourself (see below).
 >
 > Solene isn't a medical device, and it isn't birth control. Predictions are estimates. The fertility status just applies the symptothermal rules to what you log, so always double-check it yourself.
 
@@ -48,6 +48,14 @@ cd android
 ```
 
 The app runs on Android 8.0 (API 26) or newer.
+
+`./gradlew :app:assembleRelease` signs the APK only if `~/.android/solene-release.properties` exists (with `storeFile`, `keyAlias` and `password`). Otherwise you get an unsigned APK. Official releases are signed with a certificate whose SHA-256 fingerprint is:
+
+```
+5B:05:B9:52:C3:F0:2A:79:53:60:E9:56:32:03:E2:9F:99:A3:98:A2:A8:60:4E:59:5E:01:CA:FD:9E:BB:37:2E
+```
+
+You can check a downloaded APK with `apksigner verify --print-certs solene-*.apk`.
 
 ## Tests
 
